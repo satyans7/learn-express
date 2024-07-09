@@ -1,7 +1,8 @@
 class Helper {
   fetch_data() {
-    let obj = { page: "My Page" };
-    return obj;
+    let data = { page: "My Page" };
+    console.log(`HELPER:   ${data}`);
+    return data;
   }
 }
 

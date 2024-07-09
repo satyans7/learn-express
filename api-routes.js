@@ -1,4 +1,4 @@
-const helper = require("./helper");
+const controller = require("./controller");
 
 module.exports = function (app) {
   app.get("/text", (req, res) => {
@@ -10,7 +10,8 @@ module.exports = function (app) {
   });
 
   app.get("/fetch-data", (req, res) => {
-    let data = helper.fetch_data();
+    let data = controller.fetch_data();
+    console.log(`API-ROUTES:   ${JSON.stringify(data)}`);
     res.json(data);
   });
 };
